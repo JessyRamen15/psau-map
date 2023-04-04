@@ -21,6 +21,10 @@
         <title>Pampanga State Agricultural University Map</title>
     </head>
     <body>
+    <ul>
+        <li><a href="https://gothru.co/PN0QeCiGf?index=scene_0&hlookat=0&vlookat=0&fov=120">go to street view (street view will start at COECS)</a></li>
+
+    </ul>
         <div id="map">
         </div>
         <script src="js/qgis2web_expressions.js"></script>
@@ -93,6 +97,9 @@
                     </tr>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['Address'] !== null ? autolinker.link(feature.properties['Address'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Photo'] !== null ? autolinker.link(feature.properties['Photo'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
